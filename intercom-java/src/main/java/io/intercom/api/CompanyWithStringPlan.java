@@ -32,6 +32,9 @@ class CompanyWithStringPlan extends TypedData {
 
     @JsonProperty("plan")
     private String plan;
+    
+    @JsonProperty("user_count")
+    private Integer userCount;
 
     @JsonIgnoreProperties(ignoreUnknown = false)
     @JsonProperty("custom_attributes")
@@ -88,7 +91,15 @@ class CompanyWithStringPlan extends TypedData {
         this.monthlySpend = monthlySpend;
     }
 
-    public long getRemoteCreatedAt() {
+    public Integer getUserCount() {
+		return userCount;
+	}
+
+	public void setUserCount(Integer userCount) {
+		this.userCount = userCount;
+	}
+
+	public long getRemoteCreatedAt() {
         return remoteCreatedAt;
     }
 

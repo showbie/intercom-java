@@ -39,6 +39,7 @@ public class Company extends TypedData {
         entity.setName(company.getName());
         entity.setSessionCount(company.getSessionCount());
         entity.setMonthlySpend(company.getMonthlySpend());
+        entity.setUserCount(company.getUserCount());
         entity.setRemoteCreatedAt(company.getRemoteCreatedAt());
         if(company.getCustomAttributes() != null) {
             entity.getCustomAttributes().putAll(company.getCustomAttributes());
@@ -304,6 +305,11 @@ public class Company extends TypedData {
 
     public Integer getUserCount() {
         return userCount;
+    }
+    
+    public Company setUserCount(Integer userCount) {
+    	this.userCount=userCount;
+    	return this;
     }
 
     public float getMonthlySpend() {
